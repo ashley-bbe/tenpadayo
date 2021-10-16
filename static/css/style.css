@@ -1,0 +1,1841 @@
+/* 
+Common
+******************************/
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+    position: relative;
+    padding:0;
+}
+
+/*
+Header
+******************************/
+
+.header {
+    text-align: center;
+    padding: 40px;
+}
+.header a {
+    text-decoration: none;
+}
+
+.header h1 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.header p {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+/*
+Navbar
+******************************/
+
+/* .navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    align-items: center;
+}
+
+.navbar ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar a {
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    outline: none;
+    color: #5C5C5C;
+    font-weight: bold;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    width: 280px;
+}
+
+.navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+    outline: none;
+} */
+
+/*
+Footer
+******************************/
+
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.footer a {
+    outline: none;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/*
+START PAGE
+******************************/
+
+.container-start {
+    position: relative;
+    background-color: #7AB0C5;
+    background-image: url(../img/background_homepage2.jpg);
+    height: 150%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.container-start .title h1 {
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #b8b7b7;   
+}
+
+.container-start .title h2 {
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #b8b7b7;   
+}
+
+.container-start .welcome {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-start .welcome p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-start .welcome .signin {
+    border-radius: 20px;
+    background-color: #fccfb2;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-start .welcome .signup {
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-start .welcome .signup:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+.container-start .welcome .signin:hover {
+    background-color: #ffb689;      
+    color: white; 
+}
+
+/*
+LOGIN PAGE
+******************************/
+
+.container-login {
+    position: relative;
+    background-color: #7AB0C5;
+    background-image: url(../img/fernando-meloni--_sbszOg10A-unsplash.jpeg);
+    height: 120%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-login h1 {
+    padding-top: 70px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+.container-form {
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-form-content {
+    padding: 16px;
+}
+
+/* .container-form-content label [for=email], label [for=psw] {
+    text-align: left;
+} */
+
+  /* Full-width inputs */
+input[type=text], input[type=password] {
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+  
+.container-form-content button {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #fccfb2;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+}
+
+.container-form-content button:hover {
+    background-color: #ffb689;      
+    color: white; 
+}
+input[type=checkbox] {
+    margin-bottom: 10px;
+}
+.container-form-content a {
+    color: #353535;  
+}
+
+/*
+LOGOUT PAGE
+******************************/
+
+.container-logout {
+    position: relative;
+    background-color: #7AB0C5;
+    background-image: url(../img/aiony-haust-1FOeHGCkTfQ-unsplash.jpeg);
+    height: 120%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-logout h1 {
+    padding-top: 70px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+.container-logout .logout {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    /* padding: 20px; */
+    /* padding-bottom: 20px; */
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-logout .logout h3 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+}
+
+.container-logout .logout a {
+    border-radius: 20px;
+    background-color: #fccfb2;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-logout .logout .sign-in:hover {
+    background-color: #ffb689;      
+    color: white; 
+}
+
+/*
+SIGN UP PAGE
+******************************/
+
+.container-signup {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/caju-gomes-hgmjqKQOrZw-unsplash.jpeg);
+    height: 150%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-signup h1 {
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+
+.container-form-signup {
+    width: 500px;
+    height: 700px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-form-signup p {
+    margin-top: 10px;
+}
+
+.registerbtn {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+}
+
+.registerbtn:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+.container-signup .signin {
+    width: 300px;
+    height: 85px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-signup .signin:hover {
+    background-color: #999999;      
+    color: white; 
+}
+
+
+/*
+HOME PAGE
+******************************/
+
+/* NAVBAR */
+
+.container-nav .navbar navbar-expand-lg navbar-light {
+    text-align: center;
+}
+
+.container-nav .navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    align-items: center;
+}
+
+.container-nav .navbar ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container-nav .navbar a {
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    outline: none;
+    color: #5C5C5C;
+    font-weight: bold;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    width: 245px;
+}
+
+.container-nav .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+    outline: none;
+}
+
+/* CONTAINERS */
+
+.container-home {
+    background: url(../img/huha-inc-Hp-3N5Gl1Ak-unsplash.jpeg);
+    position: relative;
+    background-color: #7AB0C5;
+    min-height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.container-home .container-explanation h1 {
+    padding-top: 30px;
+    padding: 50px 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #000000;
+}
+
+.container-home .container-explanation {
+    width: 700px;
+    height: 2850px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.8);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding: 40px;
+}
+
+.container-home .container-explanation .first-things {
+    display: block;
+    width: 450px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgba(238, 219, 219, 0.6);
+    text-shadow: 0px 2px 3px #b8b7b7;
+}
+
+.container-home .container-explanation .first-things h2 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+}
+
+.container-home .container-explanation .first-things p {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.container-home .container-explanation .hair-type h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container-home .container-explanation .hair-type img {
+    border-radius: 20px;
+    height: 250px;
+    width: 250px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.container-home .container-explanation .hair-type p {
+    text-align: justify;
+}
+
+.container-home .container-explanation .hair-texture h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container-home .container-explanation .hair-texture img {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    border: 10px;
+}
+
+.container-home .container-explanation .hair-texture p {
+    text-align: center;
+}
+
+.container-home .container-explanation .hair-porosity {
+    margin-top: 50px;
+}
+
+.hair-porosity img {
+    border-radius: 20px;
+    height: 100%;
+    width: 300px;
+    float: left;
+    margin-right: 40px;
+}
+
+.container-home .container-explanation .hair-porosity p {
+    text-align: left;
+}
+
+.container-home .container-explanation .hair-porosity h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: left;
+}
+
+.container-home .container-explanation .hair-porosity .porosity-exp img {
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    margin-top: 20px;
+}
+
+.container-home .create-routine {
+    width: 700px;
+    height: 420px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.8);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding: 40px;
+}
+
+.container-home .create-routine a {
+    width: 300px;
+    height: 85px;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-home .create-routine .button-routine:hover {
+    background-color: #f75858;      
+    color: white; 
+}
+
+.container-home .create-routine h3 {
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+/*
+ROUTINE PAGE
+******************************/
+
+.container-routine {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/fernando-meloni-ztH3DB7uXcw-unsplash.jpeg);
+    height: 150%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-routine h1 {
+    width: 400px;
+    height: 120px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine .container-routine-search {
+    width: 500px;
+    height: 550px;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-routine .container-routine-search .routine-search {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-routine .container-routine-search .routine-search:hover {
+    background-color: #f75858;      
+    color: white; 
+}
+
+.container-routine .container-routine-search .box-hair-type {
+    position: relative;
+}
+
+.container-routine .container-routine-search .box-hair-type .form-select {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    padding:10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.container-routine .container-routine-search .box-hair-texture {
+    position: relative;
+}
+
+.container-routine .container-routine-search .box-hair-texture .form-select {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    padding:10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.container-routine .container-routine-search .box-hair-porosity {
+    position: relative;
+}
+
+.container-routine .container-routine-search .box-hair-porosity .form-select {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    padding:10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.container-routine-results {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/cucu-marius-daniel-zO07HKJoRwo-unsplash.jpeg);
+    min-height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-routine-results h1 {
+    width: 400px;
+    height: 120px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list {
+    width: 700px;
+    min-height: 100%;
+    overflow: auto;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    /* padding-right: auto;
+    padding-left: auto; */
+}
+.container-routine-results .routine-list p {
+    text-align: left;
+    padding-left: 50px;
+}
+
+
+.container-routine-results .routine-list a .routine-image {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.container-routine-results .routine-list .heart i {
+    font-size: 20px;
+    float: left;
+    padding-left: 52px;
+}
+
+
+.container-routine-results .routine-list .heart a {
+    color: black;
+    outline: none;
+    text-decoration: none;
+}
+
+.container-routine-results .routine-list .heart i:hover {
+    color: rgb(211, 3, 3);
+}
+
+
+.container-routine-results .routine-list .shampoo h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-top: 20px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .shampoo .shampoo-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .conditioner h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;  
+}
+
+.container-routine-results .routine-list .conditioner .conditioner-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .deep h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .deep .deep-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .leave h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .leave .leave-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .gel h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 30px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .gel .gel-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .mousse h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .mousse .mousse-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .oil h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 30px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .oil .oil-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+.container-routine-results .routine-list .serum h3 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcbaba;
+    color: #FFFFFF;
+    align-items: center;
+    display: inline-block;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-routine-results .routine-list .serum .serum-list ul {
+    width: 100%;
+    column-count: 2;
+}
+
+
+/*
+SEARCH PAGE
+******************************/
+
+.container-search {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/ian-dooley-FgSyP02I0gw-unsplash.jpeg);
+    min-height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-search h1 {
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #FCDECB;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-search .container-search-dropdown {
+    width: 500px;
+    height: 550px;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-search .container-search-dropdown .search-product {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-search .container-search-dropdown .search-product:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+
+.container-search .container-search-dropdown .search-brand {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    text-decoration: none;
+}
+
+.container-search .container-search-dropdown .search-brand:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+/*
+SEARCH RESULTS PAGE
+******************************/
+
+.container-results {
+    width: 700px;
+    min-height: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255);
+    margin-left: auto;
+    margin-right: auto;
+    /* /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-results h2 {
+    width: 400px;
+    height: 85px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #353535;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-results .container-search-results {
+    min-height: 100%;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.container-results .container-search-results p {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-results .container-search-results-display .search-img .post-image {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.container-results .container-search-results-display a {
+    outline: none;
+    text-decoration: none;
+}
+
+
+.container-results .container-search-results-display .search-display {
+    float: right;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.container-search-results-display .heart i {
+    font-size: 20px;
+    float:left;
+    text-align: center;
+}
+
+
+.container-search-results-display .heart a {
+    color: black;
+    outline: none;
+    text-decoration: none;
+}
+
+.container-search-results-display .heart i:hover {
+    color: rgb(211, 3, 3);
+}
+
+
+/*
+WISHLIST PAGE
+******************************/
+
+.container-wishlist {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/houcine-ncib-NH-20iMIE9k-unsplash.jpeg);
+    min-height: 150%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-wishlist h1 {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #353535;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #E9FAE2;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+
+.container-wishlist .wishlist-results {
+    width: 700px;
+    min-height: 100%;
+    text-align: left;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+    padding-right: 30px;
+}
+
+
+.container-wishlist .wishlist-results h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-wishlist .wishlist-results h4 {
+    font-size: 15px;
+}
+
+.container-wishlist .wishlist-results .wishlist-img .wishlist-image {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* padding-left: 50px; */
+}
+
+.container-wishlist .wishlist-results .wishlist-list p {
+    float: right;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.container-wishlist .wishlist-results .wishlist-list a {
+    outline: none;
+    text-decoration: none;
+}
+
+.container-wishlist .wishlist-results .bin i {
+    font-size: 20px;
+    float: right;
+    padding-left: 450px;
+    margin-right: 30px;
+}
+.container-wishlist .wishlist-results .bin a {
+    color: black;
+    outline: none;
+    text-decoration: none;
+}
+
+.container-wishlist .wishlist-results .bin i:hover {
+    color: grey;
+}
+
+
+/*
+PRODUCT PAGE
+******************************/
+
+.container-product {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/alonso-reyes-VlRKuXhgTu8-unsplash.jpeg);
+    min-height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    padding-bottom: 30px;
+}
+
+.container-product h1 {
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+.container-product h2 {
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+
+.container-form-product {
+    width: 500px;
+    min-height: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-form-product p {
+    margin-top: 10px;
+}
+
+.productbtn {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+}
+
+.productbtn:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+.container-product-result {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/jakob-owens-hzomkEfc-ag-unsplash.jpeg);
+    min-height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-product-result .product-result {
+    width: 800px;
+    min-height: 100%;
+    text-align: center;
+    padding: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-product-result h1 {
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #353535;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 120px;
+    color: #353535;
+    text-shadow: 0px 2px 3px #8f8f8f;
+    border-radius: 20px;
+    background-color: #fcfcfc;
+    align-items: center;
+    display: inline-block;
+    margin: 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 3px #868686;
+    text-decoration: none;
+    border: 2px;
+}
+.container-product-result .product-view a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-product-result .product-view a .result-image {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.container-product-result .product-view {
+    width: 100%;
+    column-count: 1;
+}
+
+.container-product-result .product-view .btn-edit {
+    width: 200px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    text-align: center;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7; 
+    margin-bottom: 10px;   
+}
+
+.container-product-result .product-view .btn-edit:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+.container-product-result .product-view .btn-del {
+    width: 200px;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    text-align: center;
+    color: #353535;
+    text-shadow: 0px 2px 2px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;    
+}
+
+.container-product-result .product-view .btn-del:hover {
+    background-color: #f75858;      
+    color: white; 
+}
+
+/*
+PRODUCT EDIT PAGE
+******************************/
+
+.container-edit {
+    position: relative;
+    text-align: center;
+    background-color: #7AB0C5;
+    background-image: url(../img/jakob-owens-hzomkEfc-ag-unsplash.jpeg);
+    min-height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.container-edit h1 {
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+.container-edit h2 {
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 3px #8f8f8f;  
+}
+
+
+.container-form-edit {
+    width: 500px;
+    min-height: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-form-edit p {
+    margin-top: 10px;
+}
+
+.editbtn {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b9e5fd;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+}
+
+.editbtn:hover {
+    background-color: #7dd2ff;      
+    color: white; 
+}
+
+.cancel-btn {
+    width: 150px;
+    border-radius: 20px;
+    background-color: #fc9b9b;
+    color: #353535;
+    text-shadow: 0px 2px 3px #b8b7b7;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px #b8b7b7;
+    outline: none;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    background-color: #f75858;      
+    color: white; 
+    text-decoration: none;
+}
+
+.container-product-edit {
+    width: 800px;
+    min-height: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: rgb(255,255,255, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 30px; */
+    margin-bottom: 10px;
+}
+
+.container-product-result h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
+}
+.container-product-result a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-product-result a .result-image {
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.container-product-result .product-view {
+    width: 100%;    
+}
+
+/*****************************
+RESPONSIVE CSS
+******************************/
+
+@media only screen and (max-width: 540px) {
+    .header h1 { font-size: 35px; }
+
+    .container-start .welcome,
+    .container-signup .signin { 
+        align-items: center;
+        width: auto;
+        font-size: 15px; }
+        
+    .container-start .title h1 {
+        font-size: 25px;
+    }
+
+    .container-form-signup {
+        width: auto;
+        height: auto;
+    }
+
+    .container-signup a,
+    .container-form,
+    .container-home .container-explanation {
+        width: auto;
+    }
+
+    .container-home .container-explanation .first-things {
+        width: auto;
+        height: 260px;
+    }
+
+    .container-home .container-explanation .hair-type p {
+        text-align: left;
+    }
+
+    .container-home .container-explanation .hair-type img {
+        height: 230px;
+        width: 230px;
+        float: none;
+        margin-right: 0;
+    }
+    
+    .container-home .container-explanation .hair-porosity h3 {
+        text-align: center;
+    }
+
+    .container-home .container-explanation .hair-texture p {
+        text-align: left;
+    }
+
+    .container-home .container-explanation .hair-porosity img {
+        width: 240px;
+        float: none;
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .container-home .create-routine,
+    .container-home .create-routine a {
+        width: auto;
+        height: auto;
+    }
+    
+    .container-home .create-routine h3 {
+        font-size: 15px;
+    }
+
+    .container-home .container-explanation {
+        height: auto;
+    }
+
+    .container-form 
+    .container-start .title h1, 
+    .container-start .title h2,
+    .container-home .container-explanation h1 {
+        font-size: 25px;
+    }
+
+    .container-search {
+        width: auto;
+    }
+
+    .container-search h1 {
+        font-size: 25px;
+        width: auto;
+        height: auto;
+    }
+
+    .container-search .container-search-dropdown {
+        width: auto;
+    }
+
+    .container-results {
+        width: auto;
+    }
+
+    .container-results h2 {
+        font-size: 25px;
+        width: auto;
+        height: auto;
+    }
+
+    .container-wishlist .wishlist-results {
+        width: auto;
+    }
+
+    .container-wishlist .wishlist-results .wishlist-img .wishlist-image {
+        width: 100px;
+    }
+
+    .container-routine h1,
+    .container-routine-results h1 {
+        font-size: 25px;
+        width: auto;
+        height: auto;
+    }
+
+    .container-routine .container-routine-search,
+    .container-routine-results .routine-list  {
+        width: auto;
+    }
+
+    .container-routine .container-routine-search .routine-search {
+        width: 130px;
+    }
+
+    .container-routine-results .routine-list {
+        text-align: center;
+        font-size: 15px;
+        padding-left: 0;
+    }
+
+    .container-routine-results .routine-list .shampoo h3,
+    .container-routine-results .routine-list .conditioner h3,
+    .container-routine-results .routine-list .deep h3,
+    .container-routine-results .routine-list .leave h3,
+    .container-routine-results .routine-list .gel h3,
+    .container-routine-results .routine-list .mousse h3,
+    .container-routine-results .routine-list .oil h3,
+    .container-routine-results .routine-list .serum h3 {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .container-routine-results .routine-list .shampoo .shampoo-list ul,
+    .container-routine-results .routine-list .conditioner .conditioner-list ul,
+    .container-routine-results .routine-list .deep .deep-list ul,
+    .container-routine-results .routine-list .leave .leave-list ul,
+    .container-routine-results .routine-list .gel .gel-list ul,
+    .container-routine-results .routine-list .mousse .mousse-list ul,
+    .container-routine-results .routine-list .oil .oil-list ul,
+    .container-routine-results .routine-list .serum .serum-list ul {
+       text-align: center;
+       align-items: center;
+    }
+    .container-routine-results .routine-list p,
+    .container-routine-results .routine-list .heart i {
+        padding-left: 0;
+        font-size: 15px;
+    }
+    .container-routine-results .routine-list a .routine-image {
+        width: 100px;
+    }
+
+    .container-logout .logout {
+        width: auto;
+        height: auto;
+    }
+
+    .container-logout .logout p {
+        font-size: 14px;
+    }
+
+}
+
+/* @media screen and (max-width: 746px) {
+    .container-home .container-explanation,
+    .container-home .create-routine,
+    .container-results,
+    .container-routine-results .routine-list,
+    .container-wishlist .wishlist-results { 
+        width: 100%; }
+
+} */
+
+@media screen and (max-height:500px) {
+	.footer { position: static; }
+	.header { padding-top:40px; }
+    .navbar {
+        align-items: center !important;
+    }
+    
+}

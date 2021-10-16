@@ -1,0 +1,1 @@
+web: gunicorn tenpadayo_app.wsgi

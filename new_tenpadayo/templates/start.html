@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-start">
+    <div class="title">
+        <h1>New in the curly hair community ?</h1>
+        <br>
+        <h2>Welcome !</h2> 
+    </div>
+    <br><br><br><br>
+    <div class="welcome">
+        <p>Start your curly hair journey</p>
+        <a href="{% url  'login' %}" type="button" class="button signin">SIGN IN</a>
+        <br><br>
+        <p>If you do not have an account yet</p>
+        <a href="{% url  'register' %}" type="button" class="button signup">SIGN UP</a>
+    </div>
+    <br><br><br><br><br><br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+{% block content %}
+
+<div class="container-edit">
+    <h1>Update Product</h1>
+    <h2>{{ product.product_name }}</h2>
+    <form action="/edit/{{ product.id }}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+        <div class="container-form-edit">
+        
+          <label for="product_name"><b>Product Name</b></label>
+          <input type="text" name="product_name" id="product_name" value="{{ product.product_name }}">
+
+          <label for="product_brand"><b>Product Brand</b></label>
+          <input type="text" name="product_brand" value="{{ product.product_brand }}">
+  
+          <label for="product_type" name="product_type"><b>Product Type</b></label>
+          <input type="text" name="product_type" value="{{ product.product_type }}">
+
+          <label for="product_url" name="product_url" id="Product URL"><b>Product URL</b></label>
+          <input type="text" name="product_url" value="{{ product.product_url }}">
+
+          <label for="hair_type"><b>Hair type</b></label>
+          <input type="text" name="hair_type" value="{{ product.hair_type }}">
+          
+          <label for="hair_texture" name="hair_texture"><b>Hair texture</b></label>
+          <input type="text" name="hair_texture" value="{{ product.hair_texture }}">
+          
+          <label for="hair_porosity"><b>Hair porosity</b></label>
+          <input type="text" name="hair_porosity" value="{{ product.hair_porosity }}">
+          
+          <label for="hair_porosity"><b>Product Image</b></label>
+          <input class="form-control form-control-sm" name="image" type="file" value="{{ product.image }}">
+          <br>
+            {% if product.image is not Null %}
+                <a href="{{ product.image.url }}">
+                            <image class="post-image" src="{{ product.image.url }}" style="width: 70%; border-radius: 20px;"/>
+                </a>
+            {% endif %}
+            <br>
+       
+
+          
+          <br>
+          <a href="{% url 'product' %}" button class="cancel-btn" href="#">CANCEL</a>
+          <button type="submit" class="editbtn">UPDATE</button>
+          <br>
+        </div>
+    </form>
+    <br>
+
+</div>
+      
+
+
+{% endblock %}

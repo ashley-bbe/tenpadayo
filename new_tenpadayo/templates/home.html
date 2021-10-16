@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+
+{% block content %}
+
+
+
+<div class="container-nav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link" href="{%  url  'home'  %}">WHAT YOU NEED TO KNOW</a>
+                    <a class="nav-link" href="{%  url  'search'  %}">SEARCH</a>
+                    <a class="nav-link" href="{%  url  'routine'  %}">CREATE YOUR OWN ROUTINE</a>
+                    <a class="nav-link" href="{%  url  'wishlist' user.id  %}">WISHLIST</a>
+                    <a class="nav-link" href="{%  url  'logout'  %}">SIGN OUT</a>
+                </ul>     
+            </div>
+        </div>
+    </nav>
+</div>
+
+{%if messages%}
+    {%for message in messages%}
+        <div class="alert alert-info" role="alert" align="center">
+            {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+
+{% if user.is_authenticated %}
+    <p align="center">Welcome, {{user.username}} !</p>
+{% endif %}
+
+<div class="container-home">
+    <br>
+    <div class="container-explanation">
+    <h1>What you need to know about hair</h1>
+
+        <div class="first-things">
+            <h2>First things first y’all ! </h2>
+            <p>All right, you are about to begin your curly hair journey</p> 
+            <p>but you are completely clueless?</p>
+            <p>Here are the basics you need to know and understand!</p>
+        </div>
+
+        <div class="hair-type">
+            <h3>What is « hair type » ?</h3>
+            <img src="static/img/hairtypes.JPG" alt="hair types"/>
+            <p>Hair type is usually determined by several factors such as genetics.<br><br>
+ 
+                It is the form or shape of hair strands, curly, wavy, and straight.<br><br>
+                 
+                There are four main types of hair texture:<br>
+                Type 1 - straight, Type 2 - wavy, Type 3 - curly and Type 4 - tightly curled.<br><br> 
+                The hair type can be further broken down into a, b and c based on the hair’s curl pattern, density, porosity, width and length.<br>
+                
+                For example, someone with loose curls would be Type 3a 
+                and someone with tight curls would be Type 3b.
+            </p>
+        </div>
+
+        <div class="hair-texture">
+            <h3>What is « hair texture » ?</h3>
+            <p>Hair texture is the degree of fineness or coarseness of hair strands. 
+                Hair texture is typically in 3 categories of fine, medium or coarse.<br><br>
+                You can help determine your hair texture by using a piece of thread. 
+                Compare that piece of thread to a strand of your hair. 
+                If the hair is thinner than the thread, then you are fine-textured. 
+                If both are equal, then it is medium, and if it has a bigger diameter than a thread, 
+                then it is considered coarse or thick hair.
+            </p>
+            <br>
+            <a href="https://res.cloudinary.com/dt9mdchbh/image/upload/v1633956897/hair-textures_oikltc.png"  target="_blank">
+                <img src="static/img/hair-textures.png" alt="hair textures"/>
+            </a>
+        </div>
+
+        <div class="hair-porosity">
+            <h3>What is « hair porosity » ?</h3>
+            <img src="static/img/hair-porosity.JPG" alt="hair porosity"/>
+            <p>Porosity refers to how open the cuticles are along the hair shaft. 
+                For example, low porosity means that the hair takes longer to absorb moisture 
+                but it also retains moisture for a longer time. With high porosity hair, 
+                moisture gets in too quickly and can frizz or tangle easily.<br><br>
+                You can tell that your hair is porous if it absorbs water quickly in the shower even when it has products on it, 
+                but then also dries up very fast.<br><br>
+                Grab a hair between your thumb and index finger and slide your fingers up the hair (from tip to scalp). 
+                If you slide up easily without feeling bumps, this often indicates low porosity hair. 
+                If you do feel bumps, and they are not close together, you have medium porosity. 
+                If you feel a lot of bumps in a row, you probably have high porosity hair. 
+                Those bumps you feel are the hair cuticles that are open.
+            </p>
+            <div class="porosity-exp">
+                <a href="https://res.cloudinary.com/dt9mdchbh/image/upload/v1634111325/porosity-exp_vvsrkb.png" target="_blank">
+                    <img src="static/img/porosity-exp.png" alt="porosity explanation" />
+                </a>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="create-routine">
+        <h3>YOU ARE ALL SET NOW!</h3><br>
+        <p>Now that you have all the most basic information, you can determine what are your hair characteristics !
+                So ? Is your hair a type 3 hair ?
+                Do you have high porosity hair ? <br><br>
+                
+                With all those characteristics, create your full own hair care routine suitable for your lovely curly hair just down below.
+        </p>
+        <a href="{% url  'routine' %}" type="button" class="button-routine">
+            CREATE YOUR FULL ROUTINE
+            HAIR WE GO!
+        </a>
+    </div>
+    <br><br>
+
+
+
+
+</div>
+
+{% endblock %}

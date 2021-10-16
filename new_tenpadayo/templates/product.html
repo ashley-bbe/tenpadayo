@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+{% block content %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info" role="alert" align="center">
+            {{message}}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container-product">
+    <h1>Products</h1>
+    <form action="/product/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <br>
+        <div class="container-form-product">
+
+          <label for="product_name"><b>Product Name</b></label>
+          <input type="text" placeholder="Enter Product Name" name="product_name" id="Product Name" required>
+
+          <label for="product_brand"><b>Product Brand</b></label>
+          <input type="text" placeholder="Enter Product Brand" name="product_brand" id="Product Brand" required>
+  
+          <label for="product_type" name="product_type"><b>Product Type</b></label>
+          <input type="text" placeholder="Enter Product Type" name="product_type" id="Product Type" required>
+
+          <label for="product_url" name="product_url" id="Product URL" required><b>Product URL</b></label>
+          <input type="text" placeholder="Enter Product URL" name="product_url" id="Product URL" required>
+
+          <label for="hair_type"><b>Hair type</b></label>
+          <input type="text" placeholder="Enter Hair Type" name="hair_type" id="Hair Type" required>
+          
+          <label for="hair_texture" name="hair_texture"><b>Hair texture</b></label>
+          <input type="text" placeholder="Enter Hair Texture" name="hair_texture" id="Hair Texture" required>
+          
+          <label for="hair_porosity"><b>Hair porosity</b></label>
+          <input type="text" placeholder="Enter Hair Porosity" name="hair_porosity" id="Hair Porosity" required>
+          
+          <label for="hair_porosity"><b>Product Image</b></label>
+          <input class="form-control form-control-sm" name="image" type="file">
+    
+          <br>
+          <button type="submit" class="productbtn">SUBMIT PRODUCT</button>
+          <br>
+        </div>
+    </form>
+</div>
+<br>
+<div class="container-product-result" id="registered_products">
+    <br><br>
+    <div class="product-result">
+        <h1>Registered products</h1>
+        <br><br>
+        <div class="product-view">
+             {% for product in products %}
+            <ul>
+            <div>
+            <a href="{{ product.product_url }}" target="_blank"><p><i>{{ product.product_name }}</i></p></a>
+                
+                {% if product.image is not Null %}
+                    <a href="{{ product.product_url }}"  target="_blank">
+                        <image class="result-image" src="{{ product.image.url }}"/>
+                    </a>
+                    <div>
+                        <a href='/edit/{{ product.id }}' button class="btn-edit" type="submit">Edit product</a>
+                        <a href="/delete/{{ product.id }}" button class="btn-del" type="submit">Delete product</a>
+                    </div>
+                    <br>
+                {% endif %}
+            </div>
+            </ul>
+            {% endfor %}
+        </div>    
+    </div>
+    <br>
+
+</div>
+      
+
+
+
+
+
+{% endblock %}

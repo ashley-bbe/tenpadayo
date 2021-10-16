@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container-nav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link" href="{%  url  'home'  %}">WHAT YOU NEED TO KNOW</a>
+                    <a class="nav-link" href="{%  url  'search'  %}">SEARCH</a>
+                    <a class="nav-link" href="{%  url  'routine'  %}">CREATE YOUR OWN ROUTINE</a>
+                    <a class="nav-link" href="{%  url  'wishlist' user.id  %}">WISHLIST</a>
+                    <a class="nav-link" href="{%  url  'logout'  %}">SIGN OUT</a>
+                </ul>     
+            </div>
+        </div>
+    </nav>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info" role="alert" align="center">
+            {{message}}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container-routine"><br><br>
+    <h1>Create your full hair care routine</h1>
+    
+    <form action="/routine/#routine-list" method="GET" enctype="multipart/form-data">
+    <div class="container-routine-search">
+        <label for="hair_type"><b>Let's start with your hair type</b></label>
+        <div class="box-hair-type">
+            <select label="hair_type" name="search" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected disabled>-- Choose your hair type --</option>
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="2C">2C</option>
+                <option value="3A">3A</option>
+                <option value="3B">3B</option>
+                <option value="3C">3C</option>
+                <option value="4A">4A</option>
+                <option value="4B">4B</option>
+                <option value="4C">4C</option>
+            </select>
+        </div>
+        <br>
+        <label for="hair_texture"><b>Then your hair texture</b></label>
+        <div class="box-hair-texture">
+            <select label="hair_texture" name="search" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected disabled>-- Choose your hair texture --</option>
+                <option value="Fine hair">Fine hair</option>
+                <option value="Medium hair">Medium hair</option>
+                <option value="Coarse hair">Coarse hair</option>
+            </select>
+        </div>
+        <br>
+        <label for="hair_porosity"><b>And your hair porosity</b></label>
+        <div class="box-hair-porosity">
+            <select label="hair_porosity" name="search" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected disabled>-- Choose your hair porosity --</option>
+                <option value="Low porosity">Low porosity</option>
+                <option value="Medium porosity">Medium porosity</option>
+                <option value="High porosity">High porosity</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="routine-search">CREATE</button>
+      
+      </div>
+</div>
+<br>
+{% if query %}
+<div class="container-routine-results" id="routine-list"><br><br>
+    <h1>Your full hair care routine !</h1>
+    
+    <div class="routine-list">
+        
+            {% if results %}
+                
+                <div class="shampoo">
+                    <h3>Shampoo</h3>
+                    <br><br>
+                    {% for product in results %}
+                    <div class="shampoo-list">
+                        {% if product.product_type == 'Shampoo' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                                
+                            {% endif %}
+                            
+                        </ul>
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="conditioner">
+                    <h3>Conditioner</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="conditioner-list">
+                        {% if product.product_type == 'Conditioner' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="deep">
+                    <h3>Deep Conditioner</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="deep-list">
+                        {% if product.product_type == 'Deep Conditioner' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="leave">
+                    <h3>Leave-in Conditioner</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="leave-list">
+                        {% if product.product_type == 'Leave-in Conditioner' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="gel">
+                    <h3>Gel</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="gel-list">
+                        {% if product.product_type == 'Gel' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="mousse">
+                    <h3>Mousse</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="mousse-list">
+                        {% if product.product_type == 'Mousse' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="oil">
+                    <h3>Oil</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="oil-list">
+                        {% if product.product_type == 'Oil' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="serum">
+                    <h3>Serum</h3>
+                    <br><br><br>
+                    {% for product in results %}
+                    <div class="serum-list">
+                        {% if product.product_type == 'Serum' %}
+                        <ul>   
+                            <p><i>{{product.product_name}}</i>
+                            <br>
+                            <b>{{product.product_brand}}</b></p>
+                            <div class="heart" data-product-id="{{ product.id }}">
+                                <a href="{% url 'add_to_wishlist_routine' user.id product.id %}"><i id="btn" class="far fa-heart"></i></a>
+                            </div>
+                            {% if product.image is not Null %}
+                                <a href="{{ product.product_url }}"  target="_blank">
+                                    <image class="routine-image" src="{{ product.image.url }}"/>
+                                </a>
+                            {% endif %}
+                        </ul> 
+                        {% endif %}
+                    </div>        
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No results.</p>
+            {% endif %}
+            
+        
+    </div>
+    <br>
+</div>
+{% endif %} 
+{% endblock %}

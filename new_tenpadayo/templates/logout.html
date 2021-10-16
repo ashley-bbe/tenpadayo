@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container-logout">
+      <h1>Have a great hair day!</h1>
+        <br><br>
+      <div class="logout">
+        <h3>You've been logged out</h3><br>
+        <p>Sign in again?</p>
+        <a href="{% url  'login' %}" type="button" class="sign-in">SIGN IN</a>
+        <br>
+        <br>
+        <p>Or you will be redirected to the start page in 5 seconds.</p>
+        <br>
+      </div>
+    </div>
+
+   
+    <meta http-equiv="refresh" content="5;url={% url  'start' %}"> 
+
+{% endblock %}

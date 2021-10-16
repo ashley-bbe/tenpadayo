@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container-nav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link" href="{%  url  'home'  %}">WHAT YOU NEED TO KNOW</a>
+                    <a class="nav-link" href="{%  url  'search'  %}">SEARCH</a>
+                    <a class="nav-link" href="{%  url  'routine'  %}">CREATE YOUR OWN ROUTINE</a>
+                    <a class="nav-link" href="{%  url  'wishlist' user.id %}">WISHLIST</a>
+                    <a class="nav-link" href="{%  url  'logout'  %}">SIGN OUT</a>
+                </ul>     
+            </div>
+        </div>
+    </nav>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info" role="alert" align="center">
+            {{message}}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container-wishlist"><br><br>
+    <h1>Wishlist</h1>
+
+    <div class="wishlist-results">
+        <h3>Saved products</h3>
+        <br><br>
+        
+        
+        {% if wishlists %}
+    
+        {% for wishlist in wishlists %}
+        
+        
+        <div class="wishlist-list">
+            <p>
+                <i>{{ wishlist.product }}</i><br>
+                <b>{{wishlist.product_brand}}</b>
+            </p>
+        </div>
+        
+        <div class="bin">
+            <a href="/del_wishlist/{{ wishlist.product.id }}"><i id="btn" class="far fa-trash-alt"></i></a>
+        </div>
+        <br>
+        <div class="wishlist-img">
+            
+            {% if wishlist.image is not Null %}
+            <a href="{{ wishlist.product_url }}"  target="_blank">
+                <image class="wishlist-image" src="{{ wishlist.image.url }}"/>
+            </a>
+            {% endif %}
+        </div> 
+        <br>   
+        
+        {% endfor %}
+    
+        {% else %}
+                <p>No product found.</p>
+   
+        {% endif %}
+    </div>
+    <br><br>
+
+</div>
+
+
+
+{% endblock %}

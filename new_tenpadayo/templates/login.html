@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{%if messages%}
+    {%for message in messages%}
+        <div class="alert alert-info" role="alert" align="center">
+            {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+
+    <div class="container-login">
+      <h1>Have a great hair day !</h1>
+        <br><br>
+      <div class="container-form">
+        
+        <form method="post">
+        {% csrf_token %}
+          <div class="container-form-content">
+            {{ login_form|crispy }}
+            <button type="submit">SIGN IN</button>
+            <br>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+{% endblock %}
