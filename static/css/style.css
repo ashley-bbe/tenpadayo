@@ -142,7 +142,7 @@ START PAGE
     font-weight: bold;
 }
 
-.container-start .welcome .signin {
+.container-start .welcome .sign-in {
     border-radius: 20px;
     background-color: #fccfb2;
     color: #353535;
@@ -159,7 +159,7 @@ START PAGE
     text-decoration: none;
 }
 
-.container-start .welcome .signup {
+.container-start .welcome .sign-up {
     border-radius: 20px;
     background-color: #b9e5fd;
     color: #353535;
@@ -176,12 +176,12 @@ START PAGE
     text-decoration: none;
 }
 
-.container-start .welcome .signup:hover {
+.container-start .welcome .sign-up:hover {
     background-color: #7dd2ff;      
     color: white; 
 }
 
-.container-start .welcome .signin:hover {
+.container-start .welcome .sign-in:hover {
     background-color: #ffb689;      
     color: white; 
 }
@@ -315,7 +315,7 @@ LOGOUT PAGE
     font-size: 30px;
 }
 
-.container-logout .logout a {
+.container-logout .logout .sign-in{
     border-radius: 20px;
     background-color: #fccfb2;
     color: #353535;
@@ -624,7 +624,7 @@ HOME PAGE
     padding: 40px;
 }
 
-.container-home .create-routine a {
+.container-home .create-routine .button-routine {
     width: 300px;
     height: 85px;
     border-radius: 20px;
@@ -700,7 +700,7 @@ ROUTINE PAGE
     padding: 50px;
     box-sizing: border-box;
     border-radius: 25px;
-    background: rgb(255,255,255);
+    background: rgb(255,255,255, 0.7);
     margin-left: auto;
     margin-right: auto;
     /* padding-bottom: 30px; */
@@ -773,8 +773,7 @@ ROUTINE PAGE
 .container-routine-results {
     position: relative;
     text-align: center;
-    background-color: #7AB0C5;
-    background-image: url(../img/cucu-marius-daniel-zO07HKJoRwo-unsplash.jpeg);
+    background-color: #FFF;
     min-height: 100%;
     width: 100%;
     background-position: center;
@@ -1704,7 +1703,7 @@ RESPONSIVE CSS
     }
 
     .container-home .create-routine,
-    .container-home .create-routine a {
+    .container-home .create-routine .button-routine {
         width: auto;
         height: auto;
     }
