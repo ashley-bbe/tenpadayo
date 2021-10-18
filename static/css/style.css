@@ -1703,7 +1703,7 @@ RESPONSIVE CSS
     }
 
     .container-home .create-routine,
-    .container-home .create-routine .button-routine {
+    .container-home .create-routine a.button-routine {
         width: auto;
         height: auto;
     }
