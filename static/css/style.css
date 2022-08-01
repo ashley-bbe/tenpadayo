@@ -1847,4 +1847,5 @@ RESPONSIVE CSS
 @media screen and (max-width: 991px) {
 	.container-nav {
 		justify-content: left;
+	}
 }
