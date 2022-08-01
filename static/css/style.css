@@ -439,6 +439,11 @@ HOME PAGE
     text-align: center;
 }
 
+.container-nav {
+    display: flex;
+    justify-content: center;	
+}	
+
 .container-nav .navbar {
     display: flex;
     justify-content: center;
