@@ -14,9 +14,9 @@ It's a project using HTML, CSS, Bootstrap and Django.
 
 [Live Heroku Deployment](https://tenpadayo.herokuapp.com/)
 
-Test account:
-Login: Test
-Password: Testing000
+## Test account
+# Login: Test
+# Password: Testing000
 
 
 
