@@ -5,7 +5,7 @@
 プログラミングスクールのプロジェクトでした！
 天然パーマを活かしてる方向けに情報を発信したり商品を紹介するwebアプリです。
 
-[サイトはここ](https://tenpadayo.herokuapp.com/)
+[サイトはこちら](https://tenpadayo.herokuapp.com/)
 
 ## 目的
 
